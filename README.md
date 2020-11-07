@@ -2,12 +2,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Clone the repo or download repo.
+
+After that change directory to project folder then follow below command.
+
 First, run the development server:
 
+In terminal command type below command to start :-
+
 ```bash
-npm run dev
-# or
-yarn dev
+yarn && yarn dev
+or
+npm i && npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
