@@ -4,7 +4,7 @@ function Post({post}){
 
     return (<>
     {Object.keys(post).length && <Link href='/' ><div className={'back'}>Back</div></Link>}
-    { Object.keys(post).length ? <div className={'container'}>
+    { Object.keys(post).length ? <div className={'post-container'}>
           <img
           alt=""
           src={`https://robohash.org/${post.id}?200x200`}
