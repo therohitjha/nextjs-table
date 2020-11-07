@@ -11,8 +11,6 @@ First, run the development server:
 In terminal command type below command to start :-
 
 ```bash
-npm i && npm run dev
-# or
 yarn && yarn dev
 ```
 
