@@ -17,7 +17,7 @@ function Post({post}){
         <div className={'username padding'}>Username :- @{post.username}</div>
         <div className={'padding'}>Email :- {post.email}</div>
         <div className={'padding'}>Website :- <Link href={`//${post.website}`} target='_blank'>{post.website}</Link></div>
-        <div className={'padding'}>Phone :- {post.phone}</div>
+        <div className={'padding'} type='tel'>Phone :- {post.phone}</div>
         <div className={'padding'}>Company :- {post.company.name}</div>
         <div className={'padding'}>City :- {post.address.city}</div>
     </div> : 'No Data'}</>)

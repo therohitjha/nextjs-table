@@ -53,12 +53,12 @@ html,body{
   font-weight: 600;
   left: 18vw;
   top: 3vh;
-  text-decoration: underline;
   cursor: pointer;
 
   &:hover{
     transition: all .4s ease-in-out;
     transform: scale(1.1);
+    text-decoration: underline;
   }
 }
 
