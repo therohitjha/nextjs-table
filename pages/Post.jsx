@@ -1,11 +1,13 @@
 import { withRouter } from 'next/router'
 import Link from 'next/link'
+import Image from 'next/image'
+
 function Post({post}){
 
     return (<>
     {Object.keys(post).length && <Link href='/' ><div className={'back'}>Back</div></Link>}
     { Object.keys(post).length ? <div className={'post-container'}>
-          <img
+          <Image
           alt=""
           src={`https://robohash.org/${post.id}?200x200`}
           width={200}
