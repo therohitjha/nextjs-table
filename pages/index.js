@@ -1,28 +1,38 @@
-import React,{useMemo} from 'react'
-import Table from './Table'
+import React from 'react'
+import Link from 'next/link';
+
 
 function Home({data}) {
-  const columns = useMemo(()=>{
-    return [
-      {
-        Header: 'ID',
-        accessor: 'id'
-      },
-      {
-        Header: 'User ID',
-        accessor: 'userId'
-      },
-      {
-        Header: 'Title',
-        accessor: 'title'
-      },
-    ]},[]);
-
+  
   return (
-    <div className={'container'}>
-      <div className={'title'}>React Table</div>
-      <Table columns={columns} data={data}/>
+    <div className="table">
+    
+    <div className="row header">
+      <div className="cell">
+        ID
+      </div>
+      <div className="cell">
+        USERID
+      </div>
+      <div className="cell">
+        TITLE
+      </div>
     </div>
+    {data.map((e)=><div className="row" key={e.id}>
+     <div className="cell" data-title="ID">
+        {e.id}
+      </div>
+      <div className="cell" data-title="UserID">
+        {e.userId}
+      </div>
+      <Link href='/[id]' as={`/${e.id}`}>
+        <div className="cell" data-title="Title" style={{cursor:'pointer'}}>
+        {e.title}
+      </div>
+      </Link>
+    </div>)}
+    
+  </div>
   )
 }
 

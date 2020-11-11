@@ -1,11 +1,12 @@
-import { withRouter } from 'next/router'
-import Link from 'next/link'
+import React from 'react'
+import Link from 'next/link';
 import Image from 'next/image'
 
-function Post({post}){
 
-    return (<>
-    {Object.keys(post).length && <Link href='/' ><div className={'back'}>Back</div></Link>}
+function Posts({post}) {
+  
+  return (<>
+    {Object.keys(post).length ? <Link href='/' ><div className={'back'}>Back</div></Link>: null}
     { Object.keys(post).length ? <div className={'post-container'}>
           <Image
           alt=""
@@ -24,9 +25,10 @@ function Post({post}){
 }
 
 export async function getServerSideProps({query:{id}}) {
+    
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     const post = await res.json()
     return { props: { post } }
   }
 
-export default withRouter(Post)
+export default Posts
