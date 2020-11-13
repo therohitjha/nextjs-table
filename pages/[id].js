@@ -27,7 +27,7 @@ function Posts({usersDetails, posts}) {
         <div className='flex'><div className='post-body'>Post:-</div>{posts.body}</div>
           </div>
 
-    </div> : <div className='error-page'>Something Went Wrong :(</div>}</>)
+    </div> : <div className='error-page-container'><div className='error-page'>404 Page Not Found</div><Link href='/'><a>Home</a></Link></div>}</>)
 }
 
 export async function getServerSideProps({query:{id}}) {

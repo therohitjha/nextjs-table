@@ -170,15 +170,25 @@ body {
     margin-right: .3vw;
   }
 
-  .error-page{
+  .error-page-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+  .error-page{
     color: red;
     font-weight: 600;
     font-size: 5vw;
+    margin-bottom: 5vw;
   }
+  a{
+    font-size: 3vw;
+  }
+  }
+
+
   
   @media (max-width: '918px'){
     .title{
