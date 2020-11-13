@@ -6,6 +6,10 @@ body {
     -webkit-font-smoothing: antialiased;
     background: #969696;
   }
+
+  .flex{
+    display: flex;
+  }
   @media screen and (max-width: 580px) {
     body {
       font-size: 16px;
@@ -107,7 +111,7 @@ body {
     align-items: center;
     background-color: #fff;
     text-align: center;
-    height: 100vh;
+    height: 100%;
    
   }
   
@@ -140,6 +144,41 @@ body {
       text-decoration: underline;
     }
   }
+
+  .posts-header{
+    font-weight: 600;
+    background: #eee;
+    padding: 1vw;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.5vw;
+  }
+  .posts-details{
+    background: #eee;
+    padding: 1vw;
+    border-radius: 5px;
+    width: 90%;
+    margin: .5vw;
+  }
+
+  .post-title{
+    font-weight: 600;
+    margin-right: .3vw;
+  }
+  .post-body{
+    font-weight: 600;
+    margin-right: .3vw;
+  }
+
+  .error-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: red;
+    font-weight: 600;
+    font-size: 5vw;
+  }
   
   @media (max-width: '918px'){
     .title{
@@ -166,6 +205,9 @@ body {
   @media (max-width: '500px'){
     .post-container{
       width: 500px;
+    }
+    .posts-header{
+      font-size: 3vw;
     }
    
   }
